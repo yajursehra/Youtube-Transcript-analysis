@@ -14,10 +14,10 @@ import base64
 from io import BytesIO
 
 # Initialize the OpenAI client
-client = OpenAI(api_key="sk-proj-kAMDbhkwD2KOq2FNaaDkT3BlbkFJ5n21SHhid9ENrwtocATV")
+client = OpenAI(api_key="Your_OpenAI_API_Key")
 
 # Set up YouTube API client
-API_KEY = 'AIzaSyDTyscR8qOvDgIVXDg00lF30rErrwpDsxg'
+API_KEY = 'Your_API_Key'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
 youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=API_KEY)
@@ -128,7 +128,7 @@ def main():
 
         if st.button("Analyze"):
             if profile_url and num_posts:
-                apify_client = ApifyClient("apify_api_xnqbCf8bf1JonLnszlq2Zw8jzzU7JR2spnnu")
+                apify_client = ApifyClient("apify_api_key")
 
                 run_input = {
                     "directUrls": [profile_url],
